@@ -11,6 +11,13 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/index','HomeController@index');
+Route::get('/form','AuthController@form');
+Route::get('/welcome','HomeController@home');
+Route::post('/signup','AuthController@signup');
